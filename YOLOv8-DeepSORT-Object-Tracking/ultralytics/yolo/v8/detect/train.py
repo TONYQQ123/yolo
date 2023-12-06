@@ -199,11 +199,14 @@ class Loss:
 def train(cfg):
     cfg.model = cfg.model or "yolov8n.yaml"
     cfg.data = cfg.data or "coco128.yaml"  # or yolo.ClassificationDataset("mnist")
-    # trainer = DetectionTrainer(cfg)
-    # trainer.train()
+    #trainer = DetectionTrainer(cfg)
+    #trainer.train()
     from ultralytics import YOLO
     model = YOLO(cfg.model)
     model.train(**cfg)
+    #change
+    model.export()
+    #change
 
 
 if __name__ == "__main__":

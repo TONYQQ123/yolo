@@ -1,0 +1,13 @@
+train: train/images
+val: 
+test:
+
+nc: 1
+names: ['human']
+
+roboflow:
+  workspace: tot-zz-ktmj6
+  project: test-nnrv1
+  version: 1
+  license: Private
+  url: https://app.roboflow.com/tot-zz-ktmj6/test-nnrv1/1

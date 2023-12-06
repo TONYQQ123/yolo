@@ -21,7 +21,10 @@ class DetectionValidator(BaseValidator):
 
     def __init__(self, dataloader=None, save_dir=None, pbar=None, logger=None, args=None):
         super().__init__(dataloader, save_dir, pbar, logger, args)
-        self.data_dict = yaml_load(check_file(self.args.data), append_filename=True) if self.args.data else None
+        #self.data_dict = yaml_load(check_file(self.args.data), append_filename=True) if self.args.data else None
+        #change
+        self.data_dict = yaml_load(check_file('data.yaml'), append_filename=True) if self.args.data else None
+        #change
         self.is_coco = False
         self.class_map = None
         self.metrics = DetMetrics(save_dir=self.save_dir, plot=self.args.plots)
